@@ -24,7 +24,7 @@ app.post('/', (req, res) => {
      const student = database.collection('student');
      // Query for a movie that has the title 'Back to the Future'
     //  const query = { name: 'Peter2', age: 46 };
-     const result = await student.insertOne(req.body);
+     const result = await student.insertMany(req.body);
      console.log(result);
    } finally {
      // Ensures that the client will close when you finish/error
